@@ -6,9 +6,12 @@ export function HomeBanner() {
     <div className="home__banner">
       <span className="banner-text">FREE DELIVERY ON ALL ORDERS /- </span>
       <div className="banner__links">
-        <span className="social-link__github">
+        <a
+          href="https://github.com/imukulsaini/Crux-Ecom"
+          className="social-link__github"
+        >
           About : | <AiFillGithub size="1.5rem" /> |
-        </span>
+        </a>
       </div>
     </div>
   );
