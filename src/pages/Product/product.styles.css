@@ -1,0 +1,139 @@
+.product-page {
+  width: 100%;
+  display: grid;
+  grid-template-rows: 5rem minmax(80vh, auto);
+  grid-template-columns: 1.5fr 8fr;
+  grid-template-areas:
+    "nav nav "
+    "sidebar main";
+}
+.nav {
+  grid-area: nav;
+}
+.product-page__main {
+  grid-area: main;
+  padding-bottom: 5rem;
+}
+.sidebar {
+  grid-area: sidebar;
+
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 0px 7px;
+}
+.footers {
+  border: 1px solid black;
+  grid-area: footer;
+}
+
+/* SIDEBAR COMPONENT STYLES */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.sidebar__heading {
+  /* margin-top: 1.5rem; */
+  align-self: center;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  color: #37393a;
+}
+
+.sidebar__head-contain {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+  margin-top: 1rem;
+}
+.clear-filter__btn {
+  cursor: pointer;
+  color: #d12d2d;
+  font-size: 0.9rem;
+  background-color: none;
+  background: none;
+  border: none;
+}
+
+.filters {
+  margin-left: 1rem;
+  width: 90%;
+  border-top: 2px solid #54585a;
+  border-bottom: 2px solid #54585a;
+  display: flex;
+  flex-direction: column;
+  padding: 0.9rem;
+}
+.filters__items {
+  display: flex;
+}
+.filters__name {
+  flex-grow: 1;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #37393a;
+}
+.filter__button {
+  margin-right: 1rem;
+
+  background-color: inherit;
+  border: none;
+}
+.filter__button:hover {
+  cursor: pointer;
+}
+
+.category-name {
+  font-size: 1.5rem;
+  border-bottom: 1px solid #e1e3e4;
+  margin: 2rem;
+  padding-bottom: 1rem;
+  color: #37393a;
+  font-weight: 700;
+}
+.sort__menu {
+  height: 3rem;
+  justify-content: end;
+  display: flex;
+  border-bottom: 1px solid #e1e3e4;
+
+  padding-bottom: 0.5rem;
+}
+
+.sort__menu-name {
+  color: #37393a;
+  padding: 1rem;
+}
+
+.product-card {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(15.5rem, 1fr));
+}
+
+.filter__price-range {
+  padding-top: 1rem;
+}
+.filter__stock {
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+.category__type {
+  padding-top: 0.5rem;
+  display: flex;
+  gap: 3rem;
+  letter-spacing: 0.5px;
+}
+.filter__type-name {
+  padding-left: 0.5rem;
+}
+.filter__type-brand {
+  padding-top: 0.5rem;
+}
+
+.food-type__type {
+  padding-top: 0.5rem;
+  letter-spacing: 0.5px;
+}

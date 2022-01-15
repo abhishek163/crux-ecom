@@ -1,0 +1,97 @@
+.card {
+  border: 1px solid #e1e3e4;
+  width: 17rem;
+  max-width: 17.2rem;
+  /* height: 29rem; */
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
+  margin-top: 1rem;
+  position: relative;
+  cursor: pointer;
+}
+.card:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 0px 7px;
+}
+.card__wishlist-container {
+  position: absolute;
+  top: 4%;
+  left: 85%;
+}
+.card__view-txt {
+  background-color: #fbbc34;
+  color: black;
+  width: 100%;
+  height: 2rem;
+  position: absolute;
+  top: 57%;
+  transition: width 2s, height 2s, transform 2s;
+  text-align: center;
+  padding-top: 0.2rem;
+  letter-spacing: 0.5px;
+  opacity: 0;
+  font-size: 0.9rem;
+}
+.card:hover .card__view-txt {
+  opacity: 1;
+}
+.card__image {
+  width: 17rem;
+  height: 13rem;
+  object-fit: cover;
+  padding-top: 1rem;
+  padding: 1rem;
+}
+.card__image:hover {
+  transform: scale(1.1, 1.1);
+}
+.card__divider {
+  width: 4rem;
+  border: 1px solid #37393a;
+  margin-left: 1.7rem;
+  margin-top: 2rem;
+}
+.card__brand-name {
+  padding-left: 0.7rem;
+  display: block;
+  color: #37393a;
+  margin-top: 1rem;
+  letter-spacing: 0.5px;
+  align-self: center;
+  font-size: 1.1rem;
+  width: 95%;
+}
+.card__product-name {
+  font-size: 0.87rem;
+  /* font-weight: 510; */
+  color: #37393a;
+  padding-left: 1rem;
+  padding-right: 1.5rem;
+  letter-spacing: 0.5px;
+  margin-top: 0.3rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.card__price-info {
+  margin-top: 0.9rem;
+  font-size: 0.9rem;
+  padding-left: 1rem;
+}
+.card__price {
+  font-weight: 600;
+  color: #252525;
+}
+.card__disc {
+  padding: 0.2rem;
+  letter-spacing: 1px;
+  padding-left: 0.6rem;
+  color: rgb(107, 107, 107);
+}
+.card__disc-per {
+  padding-left: 0.1rem;
+  font-size: 0.8rem;
+  color: rgb(201, 5, 5);
+}
