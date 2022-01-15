@@ -1,0 +1,20 @@
+.home__banner {
+  display: flex;
+
+  align-items: center;
+  background-color: #f3f3f5;
+  justify-content: space-between;
+  gap: 1rem;
+
+  height: 2rem;  
+
+  padding: 0.2rem 2rem 0.2rem 4rem;
+}
+.banner-text{
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+.social-link__github {
+    font-size: 0.7rem;
+  cursor: pointer;
+}

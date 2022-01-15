@@ -1,0 +1,58 @@
+.user__input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.user__label {
+  display: block;
+  font-size: 0.9rem;
+  letter-spacing: 1.3px;
+  color: #52545b;
+}
+.user__input {
+  height: 2.3rem;
+
+  border-radius: 5px;
+  padding: 0.5rem;
+  width: 95%;
+  color: #52545b;
+  border: none;
+  background-color: inherit;
+  border: 1px solid #e9e9e9;
+}
+
+.user__name {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.user__name-label {
+  font-size: 0.9rem;
+  letter-spacing: 1.3px;
+  display: block;
+  color: #52545b;
+}
+.user__input-name {
+  border-radius: 5px;
+  padding: 0.5rem;
+  width: 90%;
+  border: none;
+  background-color: inherit;
+  border: 1px solid #e9e9e9;
+  height: 2.3rem;
+  color: #52545b;
+}
+.form__input-error {
+  display: none;
+  font-size: 0.9rem;
+  color: red;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+input:invalid[focused="true"] ~ .form__input-error {
+  display: block;
+}
