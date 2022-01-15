@@ -5,15 +5,15 @@ import { ToggleFilterIcons } from "./ToggleFilterIcons";
 
 export function CategoryFilter() {
   const [isCategoryVisible, setCategoryVisible] = useState(true);
-  const [category, setCategory] = useState("");
   const {
     state: { categoryFilters },
     productDispatch,
   } = useProduct();
+  const [category, setCategory] = useState(categoryFilters);
 
-  useEffect(() => {
-    setCategory(categoryFilters);
-  }, [categoryFilters])
+  // useEffect(() => {
+  //   setCategory(categoryFilters);
+  // }, [categoryFilters])
 
   function getCategoryProduct(e) {
     if (e.target.id === "dog-category") {
