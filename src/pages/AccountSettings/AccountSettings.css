@@ -1,0 +1,211 @@
+.account-setting {
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 4.5rem auto;
+  grid-template-areas:
+    "nav"
+    "main";
+}
+.account-setting__main {
+  margin-top: 1.3rem;
+  grid-area: main;
+  width: 60%;
+  height: 92%;
+  justify-self: center;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+}
+.account__main {
+  width: 100%;
+}
+.setting__header {
+  margin-top: 1rem;
+}
+.setting__header-name {
+  font-size: 1.5rem;
+  padding-left: 1rem;
+  color: #353340;
+}
+.setting__header-link {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid #353340;
+  height: 3rem;
+}
+.setting__header-item {
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color:#353340;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 8px;
+
+}
+
+.profile-change__form {
+  padding: 1rem;
+  display: flex;
+  margin-top: 1rem;
+  border: 1.5px solid #353340;
+  width: 85%;
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+  flex-direction: column;
+  border-radius: 8px;
+  gap: 1.5rem;
+}
+.profile__name {
+  display: flex;
+  flex-wrap: wrap;
+}
+.profile__first-name {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.profile__last-name {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.profile__name-label {
+  font-size: 0.9rem;
+  letter-spacing: 1.3px;
+  display: block;
+  color: #52545b;
+}
+.profile__input-name {
+  color: #ffffff;
+
+  border-radius: 5px;
+  padding: 0.5rem;
+  width: 90%;
+  border: none;
+  background-color: inherit;
+  height: 2.3rem;
+}
+.profile__error {
+  display: block;
+  color: red;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+.profile__email {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: #52545b;
+}
+.profile__label-email {
+  font-size: 0.9rem;
+  letter-spacing: 1.3px;
+  display: block;
+}
+.profile__input-email {
+  color: #ffffff;
+
+  width: 95%;
+  border-radius: 5px;
+  padding: 0.5rem;
+  border: none;
+  background-color: #353340;
+  height: 2.3rem;
+}
+.profile__success-status {
+  color: #228b22;
+}
+.profile__username {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.profile__label-username {
+  display: block;
+  font-size: 0.9rem;
+  letter-spacing: 1.3px;
+  color: #52545b;
+}
+.profile__input-username {
+  color: #ffffff;
+
+  width: 95%;
+  border-radius: 5px;
+  padding: 0.5rem;
+  border: none;
+  background-color: #353340;
+  height: 2.3rem;
+}
+.account__action-btn {
+  align-self: flex-start;
+  height: 2rem;
+  width: auto;
+  font-size: 0.9rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: #46d105;
+  border: 1px solid #46d105;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.password-change__form {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+  gap: 1rem;
+
+  padding: 1rem;
+  display: flex;
+  margin-top: 1rem;
+  border: 1.5px solid #353340;
+  width: 85%;
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+  flex-direction: column;
+  border-radius: 8px;
+  gap: 1.5rem;
+}
+.password__current-pass {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.password__label-password {
+  font-size: 0.9rem;
+  letter-spacing: 1.3px;
+  display: block;
+  color: #52545b;
+}
+.password__input {
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 0.5rem;
+  width: 90%;
+  border: none;
+  background-color: #353340;
+  height: 2.3rem;
+}
+.password__error {
+  display: block;
+  color: red;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+.profile__new-pass {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: #52545b;
+}
