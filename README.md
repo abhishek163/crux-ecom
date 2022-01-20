@@ -18,6 +18,7 @@
     * Mongoose
     * MongoDB
     * Authentication - JWT 
+    * Razorpay Payment Gateway
    
  # Features
  * Add Products to your wishlist
