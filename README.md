@@ -23,7 +23,7 @@
  * Add Products to your wishlist
  * Add Products into your cart 
  * order with checkout flow
- * Pay Online with Razorpay 
+ * Pay with Razorpay 
  * Quick & easy Filter across brands 
  * Search Products   
  * Price , category and Food Type Filters
