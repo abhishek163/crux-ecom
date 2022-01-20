@@ -1,3 +1,42 @@
+ 
+## Live Project - [Crux Store](https://crux-store.netlify.app/)
+## Backend - [Link](https://github.com/imukulsaini/ecom-backend)
+# Credentials
+* username : mukulsaini
+* password : mukulsaini1@
+
+# Tech Stack 
+ 
+ * Fronted 
+   * HTML5
+   * CSS
+   * ReactJs
+   * Router - React Router v6 
+ 
+ * Backend
+    * Express-Js
+    * Mongoose
+    * MongoDB
+    * Authentication - JWT 
+   
+ # Features
+ * Add Products to your wishlist
+ * Add Products into your cart 
+ * order with checkout flow
+ * Pay Online with Razorpay 
+ * Quick & easy Filter across brands 
+ * Search Products   
+ * Price , category and Food Type Filters
+ * Update User Profile and Password
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
