@@ -51,9 +51,15 @@ export function PasswordSetting() {
     if (response.errMessage) {
       setUpdateStatus("rejected");
       setError(response.errMessage);
+      toast.error(`${response.errMessage}`, {
+        position: "bottom-right",
+        autoClose: 2000,
+        hideProgressBar: true,
+        progress: undefined,
+      });
     } else {
       setUpdateStatus("fulfilled");
-      toast.success("ssuccessfully password changed", {
+      toast.success("successfully password changed", {
         position: "bottom-right",
         autoClose: 2000,
         hideProgressBar: true,
@@ -79,34 +85,20 @@ export function PasswordSetting() {
               label={value.label}
               onChangeInput={onChangeInput}
               pattern={value.pattern}
+              isErrorMessageVisible={true}
               {...value}
             />
           );
         })}
 
-        {updateStatus === "idle" ||
-          ("fulfilled" && (
-            <button type="submit" className="account__action-btn">
-              change password
-            </button>
-          ))}
-
-        {updateStatus === "pending" && (
-          <button className="account__action-btn">
-            changing password
+        <button type="submit" className="account__action-btn">
+          changing password
+          {updateStatus === "pending" && (
             <span className="loading-indicator__spin">
-              <LoadingSpinner color={"#fffff"} isDefaultCss={false} size={13} />
+              <LoadingSpinner isDefaultCss={false} color={"#fffff"} size={13} />
             </span>
-          </button>
-        )}
-        {updateStatus === "rejected" && (
-          <>
-            <span className="password__error">{error}</span>
-            <button type="submit" className="account__action-btn">
-              change password
-            </button>
-          </>
-        )}
+          )}
+        </button>
       </form>
     </div>
   );
