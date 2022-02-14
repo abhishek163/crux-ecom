@@ -5,7 +5,8 @@ import { useAuth } from "../../../context/auth";
 import { FormInput } from "../../components/FormInput/FormInput";
 import { FormNamesInput } from "../../components/FormInput/FormNamesInput";
 import { LoadingSpinner } from "../../components/Spinner/LoadingSpinner";
-
+import "react-toastify/dist/ReactToastify.css";
+toast.configure();
 export function ProfileSetting() {
   const [loading, setLoading] = useState("idle");
   const [updateStatus, setUpdateStatus] = useState("idle");
@@ -95,15 +96,21 @@ export function ProfileSetting() {
     if (response.errMessage) {
       setUpdateStatus("rejected");
       setError(response.errMessage);
+      toast.error(`${response.errMessage}`, {
+        position: "bottom-right",
+        autoClose: 2000,
+        hideProgressBar: true,
+        progress: undefined,
+      });
     } else {
       setUpdateStatus("fulfilled");
+      authDispatch({ type: "UPDATE_PROFILE_DATA", payload: response });
       toast.success("profile updated", {
         position: "bottom-right",
         autoClose: 2000,
         hideProgressBar: true,
         progress: undefined,
       });
-      authDispatch({ type: "UPDATE_PROFILE_DATA", payload: response });
     }
   }
 
@@ -150,33 +157,18 @@ export function ProfileSetting() {
             );
           })}
 
-          {updateStatus === "rejected" && (
-            <>
-              <button type="submit" className="account__action-btn">
-                Try Again
-              </button>
-              <span className="profile__error">{error}</span>
-            </>
-          )}
-
-          {updateStatus === "idle"|| updateStatus === 'fulfilled' && (
-            <button type="submit" className="account__action-btn">
-              Save
-            </button>
-          )}
-
-          {updateStatus === "pending" && (
-            <button className="account__action-btn">
-              updating
+          <button type="submit" className="account__action-btn">
+            Save
+            {updateStatus === "pending" && (
               <span className="loading-indicator__spin">
                 <LoadingSpinner
                   isDefaultCss={false}
                   color={"#fffff"}
                   size={13}
                 />
-              </span>{" "}
-            </button>
-          )}
+              </span>
+            )}
+          </button>
         </form>
       )}
     </div>
