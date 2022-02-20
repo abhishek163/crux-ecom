@@ -1,8 +1,10 @@
 .nav {
   background-color: #fbbc34;
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  align-items: center;
+  height: 3.7rem;
+  justify-content: space-between;
+  position: relative;
 }
 
 .nav__logo {
@@ -45,8 +47,11 @@
   color: #37393a;
   align-self: center;
 }
-
+.nav__search {
+  width: 30%;
+}
 .search {
+  width: 100%;
   color: #37393a;
   align-self: center;
   padding-left: 3rem;
@@ -56,14 +61,14 @@
   padding: 0.1rem;
 }
 .search__input-container {
-  width: 65%;
+  width: 100%;
   background-color: #ffffff;
   border-top-left-radius: 10px;
-
+  display: flex;
   border-top-right-radius: 10px;
 }
 .search__input {
-  width: 96%;
+  width: 95%;
   color: #37393a;
   background-color: #ffffff;
   border: 2px solid #ffffff;
@@ -78,13 +83,14 @@
   color: #37393a;
   border: #353340;
   cursor: pointer;
+  margin-right: 0.6rem;
+  border-radius: 5px;
 }
 .search__button {
   padding-top: 0.3rem;
   align-self: center;
   width: 2rem;
   height: auto;
-
   cursor: pointer;
   color: #37393a;
   background-color: inherit;
@@ -114,6 +120,12 @@
   color: #37393a;
   font-size: 1.3rem;
 }
+
+.nav__right {
+  display: flex;
+  gap: 2rem;
+}
+
 .nav__menu {
   align-self: center;
   margin-right: 1rem;
@@ -172,7 +184,7 @@
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  top: 3.7rem;
+  top: 3.5rem;
   width: 15rem;
   height: 7rem;
   border-radius: 8px;
@@ -199,4 +211,78 @@
   font-size: 0.8rem;
   letter-spacing: 1px;
   color: #37393a;
+}
+
+.hamburger-icon {
+  cursor: pointer;
+}
+.nav__hambuger-icon {
+  display: none;
+}
+.nav__user {
+  display: flex;
+  margin-right: 3rem;
+  gap: 1rem;
+}
+
+.nav__mobile {
+  display: none;
+}
+
+@media (max-width: 920px) {
+  .nav__hambuger-icon {
+    display: block;
+    width: 2.3rem;
+    height: 2rem;
+    margin-right: 2rem;
+  }
+  .nav__search {
+    display: none;
+  }
+  .nav__right {
+    display: none;
+  }
+  .nav__logo {
+    width: 10;
+    font-size: 1rem;
+  }
+  .brand__logo {
+    width: 2rem;
+    height: 2rem;
+  }
+  .nav {
+    height: 3rem;
+    position: relative;
+  }
+  .nav__dropdown-option {
+    right: 1%;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 5.5rem;
+    width: 15rem;
+    height: 7rem;
+    border-radius: 8px;
+  }
+
+  .nav__mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: absolute;
+    top: 3rem;
+    width: 100%;
+    right: 0;
+    height: 6rem;
+    z-index: 999;
+    background-color: #fbbc34;
+  }
+  
+  .nav__mobile-right {
+    display: flex;
+    justify-content: space-around;
+    transition: 1s all ease;
+  }
 }
