@@ -13,10 +13,28 @@ export function AccountSettings() {
           <div className="setting__header">
             <HeadingMain name={"Account Settings"} />
             <div className="setting__header-link">
-              <NavLink to="profile" className="setting__header-item">
+              <NavLink
+                to="profile"
+                exact="true"
+                end
+                className={({ isActive }) =>
+                  !isActive
+                    ? "setting__header-item"
+                    : "setting__header-item active-settings"
+                }
+              >
                 Profile
               </NavLink>
-              <NavLink to="password" className="setting__header-item">
+              <NavLink
+                to="password"
+                exact="true"
+                end
+                className={({ isActive }) =>
+                  !isActive
+                    ? "setting__header-item"
+                    : "setting__header-item active-settings"
+                }
+              >
                 Password
               </NavLink>
             </div>
