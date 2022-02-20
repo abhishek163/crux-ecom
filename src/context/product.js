@@ -13,7 +13,7 @@ const initialState = {
   searchData: "",
   foodTypeFilters: "",
   brandFilters: brandValues,
-  categoryFilters: "",
+  categoryFilters: null,
 };
 
 

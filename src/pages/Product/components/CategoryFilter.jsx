@@ -9,11 +9,15 @@ export function CategoryFilter() {
     state: { categoryFilters },
     productDispatch,
   } = useProduct();
-  const [category, setCategory] = useState(categoryFilters);
+  const [category, setCategory] = useState(null);
 
-  // useEffect(() => {
-  //   setCategory(categoryFilters);
-  // }, [categoryFilters])
+  useEffect(() => {
+    if (categoryFilters === null) {
+      setCategory(null);
+    } else {
+      setCategory(categoryFilters);
+    }
+  }, [categoryFilters]);
 
   function getCategoryProduct(e) {
     if (e.target.id === "dog-category") {
