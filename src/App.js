@@ -17,7 +17,6 @@ import { Checkout } from "./pages/Checkout/Checkout";
 import { NoMatch } from "./pages/NoMatch/NoMatch";
 import { getUserData } from "./api";
 import { getTokenFromLocalStorage, checkExpToken } from "./pages/utils";
-import "./App.css";
 
 export default function App() {
   const navigate = useNavigate();
