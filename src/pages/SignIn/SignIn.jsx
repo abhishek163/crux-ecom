@@ -1,9 +1,9 @@
 import { NavBar } from "../components/Navbar/Navbar";
 import { useNavigate, useLocation } from "react-router-dom";
-import { useState } from "react";
+import { useState ,useEffect,onChangeAutoFill} from "react";
 import BrandLogo  from "../../assets/BrandLogo.png";
 import { FormInput } from "../components/FormInput/FormInput";
-import "./signin.css";
+import "./signin.styles.css";
 import { LoadingSpinner } from "../components/Spinner/LoadingSpinner";
 import { SignInUser } from "../../api";
 import { useAuth } from "../../context/auth";
@@ -13,6 +13,7 @@ export function SignIn() {
     username: "",
     password: "",
   });
+  const [isAutoFill, setAutoFill] = useState(false);
 
   const values = [
     {
@@ -23,6 +24,8 @@ export function SignIn() {
       pattern: "^[A-Za-z0-9]{1,}$",
       placeholder: "killua21xyz",
       required: true,
+      value: formValues.username,
+
       label: "username",
     },
 
@@ -33,6 +36,8 @@ export function SignIn() {
       type: "password",
       placeholder: "****************",
       required: true,
+      value: formValues.password,
+
       label: "password",
     },
   ];
@@ -44,6 +49,19 @@ export function SignIn() {
   const navigate = useNavigate();
 
   const userHistoryRoute = location.state?.from?.pathname || "/";
+
+  useEffect(() => {
+    if (isAutoFill) {
+      console.log("sadasd");
+      setFormValues({
+        ...formValues,
+        username: process.env.REACT_APP_USERNAME,
+        password: process.env.REACT_APP_PASSWORD,
+      });
+    } else {
+      setFormValues({ ...formValues, username: "", password: "" });
+    }
+  }, [isAutoFill]);
 
   async function checkUserCredentials(e) {
     e.preventDefault();
@@ -62,6 +80,9 @@ export function SignIn() {
         navigate(userHistoryRoute, { replace: true });
       }
     }
+  }
+  function onChangeAutoFill() {
+    setAutoFill((autoFill) => !autoFill);
   }
 
   function onChangeInput(e) {
@@ -96,10 +117,19 @@ export function SignIn() {
                     label={value.label}
                     required={value.required}
                     pattern={value.pattern}
+                    value={value.value}
                   />
                 ))}
               </div>
-
+              <div className="auto-fill__data">
+                <input
+                  type="checkbox"
+                  name="auto-fill__input"
+                  value={isAutoFill}
+                  onChange={onChangeAutoFill}
+                />
+                <label htmlFor="auto-fill">Auto Fill</label>
+              </div>
               <div className="error__message">
                 {loading === "rejected" && (
                   <span className="sign-in__error">{error}</span>

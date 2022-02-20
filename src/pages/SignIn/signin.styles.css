@@ -157,3 +157,12 @@ input:invalid[focused="true"] ~ .input-sign__error {
   cursor: pointer;
   color: #fbbc34;
 }
+.auto-fill__data{
+  padding-left: 2rem;
+  display: flex;
+  width: 100%;
+  gap:1rem;
+  letter-spacing: 0.5px;
+  font-size: 0.8rem;
+  color: #898989;
+}
