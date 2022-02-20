@@ -5,7 +5,6 @@ import { useCart } from "../../../../context/cart";
 import { useWishList } from "../../../../context/wishList";
 
 export function NavMenuItems({ isUserLogin }) {
-    console.log({isUserLogin});
   const { cartItems } = useCart();
 
   const { wishListItems } = useWishList();

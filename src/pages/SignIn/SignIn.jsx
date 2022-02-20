@@ -52,7 +52,6 @@ export function SignIn() {
 
   useEffect(() => {
     if (isAutoFill) {
-      console.log("sadasd");
       setFormValues({
         ...formValues,
         username: process.env.REACT_APP_USERNAME,

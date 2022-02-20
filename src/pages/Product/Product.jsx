@@ -13,7 +13,6 @@ import { SortOptions } from "./components/Sortoptions";
 import "./product.styles.css";
 
 export function ProductPage() {
-  console.log('asdasd');
   const [loading, setLoading] = useState("idle");
   const [error, setError] = useState("");
   const [productData, setProductData] = useState([]);
