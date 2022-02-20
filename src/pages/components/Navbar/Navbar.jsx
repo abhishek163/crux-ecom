@@ -8,8 +8,8 @@ import { MobileNavigation } from "./components/MobileNavigation";
 import { NavLogo } from "./components/NavLogo";
 import { NavSignIn } from "./components/NavSignIn";
 import { NavDropDownMenu } from "./components/NavDropDownMenu";
-import { NavDropDownOptions } from "./components/NavDropDownOptions";
 import { NavUser } from "./components/NavUser";
+import { NavDropDownOptions } from "./components/NavDropDownOptions";
 import { NavUserName } from "./components/NavUserName";
 import "./nav.styles.css";
 
@@ -65,7 +65,7 @@ export function NavBar() {
           />
         )}
       </div>
-      {isHambugerClick && <MobileNavigation />}
+      {/* {isHambugerClick && <MobileNavigation />} */}
     </nav>
   );
 }

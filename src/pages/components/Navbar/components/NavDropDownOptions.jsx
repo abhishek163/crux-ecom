@@ -5,6 +5,7 @@ import { MdArrowDropDown } from "react-icons/md";
 
 
 export function NavDropDownOptions() {
+
   const [isDropDownModal, setDropDownModal] = useState(false);
 
   function openDropDownOption() {
@@ -13,7 +14,7 @@ export function NavDropDownOptions() {
 
   return (
     <>
-      <button onClick={openDropDownOption} className="nav__dropdown-btn">
+      <button onClick={()=>openDropDownOption()} className="nav__dropdown-btn">
         <RiAccountBoxFill />
         <MdArrowDropDown />
       </button>
