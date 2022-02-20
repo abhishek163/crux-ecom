@@ -1,0 +1,168 @@
+.sign-in {
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 4.5rem auto;
+  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-areas:
+    "nav nav nav"
+    "left main right";
+}
+
+.nav {
+  grid-area: nav;
+}
+.right {
+  grid-area: right;
+}
+.left {
+  grid-area: left;
+}
+
+.sign-in__main {
+  width: 100%;
+  grid-area: main;
+  display: grid;
+}
+.sign-in__main-container {
+  /* background-color: #252836; */
+
+  border-radius: 8px;
+  width: 30rem;
+  color: #37393a;
+
+  place-self: center;
+  /* border: 2px solid #252836; */
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.sign-in__form {
+  width: 100%;
+  height: fit-content;
+  padding-bottom: 2rem;
+  border-radius: 8px;
+}
+.sign-in__main-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+.sign__logo {
+  width: 3rem;
+  height: 3rem;
+}
+.sign-in__header-name {
+  font-size: 1.8rem;
+  color: #37393a;
+  font-weight: 600;
+  letter-spacing: 1.3px;
+}
+
+.sign-in__form-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.sign-in-label {
+  display: block;
+
+  letter-spacing: 1.3px;
+  font-size: 0.9rem;
+  padding: 0.5rem 0 0.5rem 0;
+}
+.username-info {
+  display: flex;
+  flex-direction: column;
+  padding-left: 2rem;
+  gap: 1rem;
+  letter-spacing: 0.2px;
+  color: #52545b;
+}
+.input-info {
+  color: #ffffff;
+  width: 90%;
+  height: 2.5rem;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  background-color: #353340;
+  border: none;
+  padding-left: 0.5rem;
+}
+.sign-in__error {
+  color: red;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+.input-sign__error {
+  color: red;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+  font-style: italic;
+  display: none;
+}
+input:invalid[focused="true"] ~ .input-sign__error {
+  display: block;
+}
+
+.password-info {
+  display: flex;
+  flex-direction: column;
+  padding-left: 2rem;
+  color: #52545b;
+}
+.sign-in-button {
+  width: 7.5rem;
+  font-size: 1rem;
+  height: 2.5rem;
+  letter-spacing: 1px;
+  border-radius: 7px;
+  align-self: center;
+  background-color: #fbbc34;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+.loading-indicator__spin {
+  min-width: 1rem;
+  margin-left: 0.4rem;
+}
+.register__action {
+  text-align: center;
+}
+.register__action-info {
+  margin-top: 0.5rem;
+  color: #353340;
+  display: block;
+  opacity: 0.5;
+  margin-bottom: 1.5rem;
+}
+.error__message {
+  height: 1rem;
+  padding: 0.3rem;
+  text-align: center;
+}
+.create-account-action {
+  width: fit-content;
+  background-color: inherit;
+  border: 1px solid #52545b;
+  padding: 1rem;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  border-radius: 7px;
+  cursor: pointer;
+  color: #fbbc34;
+}
+.auto-fill__data{
+  padding-left: 2rem;
+  display: flex;
+  width: 100%;
+  gap:1rem;
+  letter-spacing: 0.5px;
+  font-size: 0.8rem;
+  color: #898989;
+}
