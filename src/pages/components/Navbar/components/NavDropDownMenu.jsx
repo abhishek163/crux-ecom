@@ -15,7 +15,7 @@ export function NavDropDownMenu() {
 
   return (
     <div className="nav__dropdown-content">
-      <div onClick={() => navigate("/account")} className="nav__dropdown-item">
+      <div onClick={() => navigate("/account/profile")} className="nav__dropdown-item">
         <RiAccountBoxLine color="#37393a" className="dropdown__item-icon" />
         <span className="dropdown__item-name">Account Settings</span>
       </div>
