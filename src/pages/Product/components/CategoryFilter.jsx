@@ -9,31 +9,22 @@ export function CategoryFilter() {
     state: { categoryFilters },
     productDispatch,
   } = useProduct();
-  const [category, setCategory] = useState(null);
-
-  useEffect(() => {
-    if (categoryFilters === null) {
-      setCategory(null);
-    } else {
-      setCategory(categoryFilters);
-    }
-  }, [categoryFilters]);
 
   function getCategoryProduct(e) {
     if (e.target.id === "dog-category") {
-      setCategory("dog");
       productDispatch({
         type: "FILTER_CATEGORY",
         payload: "dog",
       });
     } else {
-      setCategory("cat");
       productDispatch({
         type: "FILTER_CATEGORY",
         payload: "cat",
       });
     }
   }
+
+  let category = categoryFilters;
 
   return (
     <div className="filters">

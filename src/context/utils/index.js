@@ -164,7 +164,7 @@ export function productReducer(state, action) {
         searchData: "",
         foodTypeFilters: "",
         brandFilters: brandValues,
-        categoryFilters: null,
+        categoryFilters: " ",
       };
     }
     default:

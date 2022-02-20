@@ -37,7 +37,7 @@ export function getFilteredData(
     )
     .filter((item) => (foodTypeFilters ? item.type === foodTypeFilters : item))
     .filter((item) =>
-      categoryFilters ? item.category === categoryFilters : item
+      categoryFilters === " " ? item : item.category === categoryFilters
     )
 
     .filter((items) =>
