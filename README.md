@@ -5,6 +5,11 @@
 * username : mukulsaini
 * password : mukulsaini1@
 
+# Environment variables
+* REACT_APP_API_KEY
+* REACT_APP_USERNAME 
+* REACT_APP_PASSWORD
+
 # Tech Stack 
  
  * Fronted 
