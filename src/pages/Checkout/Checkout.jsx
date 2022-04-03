@@ -150,6 +150,15 @@ export function Checkout() {
                   />
                 )}
               </button>
+              <span className="demo-card__details">
+                Demo Visa Card For Razorpay <br />
+                <br />
+                Card No - 4111 1111 1111 1111
+                <br />
+                CVV - Random CVV
+                <br />
+                Expiry Date - Any Future Date
+              </span>
             </div>
           )}
         </form>
