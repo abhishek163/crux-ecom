@@ -19,7 +19,7 @@ export function RemoveCartBtn({ userID, token, cartID }) {
     } else {
       setRemove("fulfilled");
       toast.success(" Item remove from cart ", {
-        position: "top-right",
+        position: "bottom-right",
         autoClose: 2000,
         hideProgressBar: true,
         progress: undefined,
